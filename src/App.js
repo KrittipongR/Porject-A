@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
 import './DemoStyle.css';
+import catIcon from './blackCat.ico';
+
+const NavBar = ({ currentPage, handlePageChange }) => {
+  return (
+    <nav>
+      {currentPage !== 'home' && <button onClick={() => handlePageChange('home')}>Home</button>}
+      {currentPage !== 'about' && <button onClick={() => handlePageChange('about')}>About</button>}
+      {currentPage !== 'contact' && <button onClick={() => handlePageChange('contact')}>Contact</button>}
+    </nav>
+  );
+};
 
 function App() {
   const [currentPage, setCurrentPage] = useState('land');
@@ -9,24 +20,12 @@ function App() {
     setCurrentPage(page);
   };
 
-  const NavBar = () => {
-    return (
-      <nav>
-        <button onClick={() => handlePageChange('home')}>Home</button>
-        <button onClick={() => handlePageChange('about')}>About</button>
-        <button onClick={() => handlePageChange('contact')}>Contact</button>
-      </nav>
-    )
-  };
-
   return (
     <>
 
       {currentPage === 'land' && (
         <div style={{ textAlign: 'center', marginTop: '20vh' }} onClick={() => handlePageChange('home')}>
-          <div style={{ height: '10vw', width: '10vw', backgroundColor: "green", marginLeft: "45vw"}}>
-            <p style={{ color: "white" }}>Logo Here</p>
-          </div>
+          <img src={catIcon} alt="Cat Icon" />
           <h1 style={{ color: '#333', fontSize: '4em', fontWeight: '700' }}>
             <span style={{color: '#5CE16E' }}>Scrapy's</span> Commission
           </h1>
@@ -35,7 +34,7 @@ function App() {
 
       {currentPage === 'home' && (
         <>
-          <NavBar />
+          <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
           <div>
             <h2>Home Page</h2>
             <p>This is the Home page content.</p>
@@ -46,7 +45,7 @@ function App() {
 
       {currentPage === 'about' && (
         <>
-          <NavBar />
+          <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
           <div>
             <h2>About Page</h2>
             <p>This is the About page content.</p>
@@ -56,7 +55,7 @@ function App() {
 
       {currentPage === 'contact' && (
         <>
-          <NavBar />
+          <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
           <div>
             <h2>Contact Page</h2>
             <p>This is the Contact page content.</p>
