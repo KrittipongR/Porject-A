@@ -1,7 +1,6 @@
-// import React, { useState } from 'react';
+import React from 'react';
 import "./App.css";
 import "./DemoStyle.css";
-// import mainIcon from "/assets/Scrapy_main.PNG";
 
 // const NavBar = ({ currentPage, handlePageChange }) => {
 //   return (
@@ -25,34 +24,58 @@ function App() {
       {
         //Landing
         <div>
-        <div className="box1" style={{padding:'11.59vh 10.83vw 11.59vh 10.83vw'}}>
-          <div>
-            <img src='/assets/Scrapy_main.PNG' alt="Scrapy" />
-            <h1><span style={{color:'#5CE16E'}}>Scrapy's</span> <span style={{color:'#302E3D'}}>Commission</span></h1>
-          </div>
-        </div>
-        <div className="box1" style={{flexDirection:"column"}}>
-          <h2>Commission Example</h2>
-          <div className="box2" style={{paddingTop:'7.81vh'}}>
-            <div className="box3">
-              <img src="" />
-            </div>
-            <div className="box3" style={{marginTop:'-3.26vh'}}>
-              <img src="" />
-            </div>
-            <div className="box3">
-              <img src="" />
-            </div>
-            <div className="box3" style={{marginTop:'-3.26vh'}}>
-              <img src="" />
+          <div className="box1" style={{ padding:'11.59vh 10.83vw 11.59vh 10.83vw' }}>
+            <div>
+              <img src='/assets/Scrapy_main.PNG' alt="Scrapy" />
+              <h1><span style={{ color:'#5CE16E' }}>Scrapy's</span> <span style={{ color:'#302E3D' }}>Commission</span></h1>
             </div>
           </div>
+        
+          { /* Com. Example */ }
+          <div className="box1" style={{ flexDirection:"column" }}>
+            <h2>Commission Example</h2>
+            <div className="box2" style={{ paddingTop:'7.81vh' }}>
+              <div className="box3">
+                <img src="" alt="" />
+              </div>
+              <div className="box3" style={{ marginTop:'-3.26vh' }}>
+                <img src="" alt="" />
+              </div>
+              <div className="box3">
+                <img src="" alt="" />
+              </div>
+              <div className="box3" style={{ marginTop:'-3.26vh' }}>
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
+
+          { /* Com. Info */ }
+          <div className="box1" style={{ flexDirection:"column" }}>
+            <h2>Commission Info</h2>
+            <h3 style={{ fontSize:"36px", margin:"0" }}>Prices</h3>
+            <div className="box2" style={{ paddingTop:'7.81vh'} }>
+              <div style={{ flexDirection: "row" }}>
+              </div>
+              <div className="box3">
+                <h3>Sketch</h3>
+                <img src="" alt="" />
+              </div>
+              <div className="box3">
+                <h3>Line Art</h3>
+                <img src="" alt="" />
+              </div>
+              <div className="box3">
+                <h3>Flat Colors</h3>
+                <img src="" alt="" />
+              </div>
+              <div className="box3">
+                <h3>Full Render</h3>
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-
-        //Commission Example
-
-
 
         /* {currentPage === 'land' && (
         <div style={{ textAlign: 'center', marginTop: '20vh' }} onClick={() => handlePageChange('home')}>
